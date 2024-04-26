@@ -80,3 +80,35 @@ class Solution
         return new  Pair(smallest, largest);
     }
 }
+
+
+import java.util.*;
+
+class GFG {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt(); // Number of test cases
+        for (int t = 0; t < T; t++) {
+            int N = sc.nextInt();
+            int array[] = new int[N];
+
+            // Read array elements and find largest and smallest values
+            int largest = Integer.MIN_VALUE;
+            int smallest = Integer.MAX_VALUE;
+            for (int i = 0; i < array.length; i++) {
+                array[i] = sc.nextInt();
+                if (largest < array[i]) {
+                    largest = array[i];
+                }
+                if (smallest > array[i]) {
+                    smallest = array[i];
+                }
+            }
+
+            // Print largest and smallest values for each test case
+            System.out.println(largest + " " + smallest);
+        }
+    }
+}
+
